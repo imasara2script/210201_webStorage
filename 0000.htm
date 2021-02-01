@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+<textarea id=ta></textarea>
+<button id=btn保存>保存</button>
+<button id=btn読込>読込</button>
+</body>
+<script>
+    onload = function(){
+        if (typeof sessionStorage !== 'undefined') {}else{ ta.value = 'このブラウザではweb Storageは使用不可' }
+    }
+    
+    btn保存.onclick = function(){
+        localStorage.setItem('ta', ta.value)
+    }
+    
+    btn読込.onclick = function(){
+        ta.value = localStorage.getItem('ta')
+    }
+</script>
+</html>
